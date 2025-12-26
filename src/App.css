@@ -1,0 +1,204 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Form container styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 1.8em;
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+/* Input fields */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 0.9em 1.2em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1em;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.form-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: rgba(100, 200, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(100, 200, 255, 0.3);
+}
+
+/* Select group for Step 1 */
+.select-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.select-wrapper label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-group.multi-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.button-group button {
+  flex: 0 1 auto;
+  padding: 0.8em 1.4em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.button-group button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.button-group button.active {
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.4), rgba(150, 200, 255, 0.4));
+  border-color: rgba(100, 200, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.4), inset 0 0 8px rgba(100, 200, 255, 0.2);
+  font-weight: 600;
+}
+
+/* Submit button for Step 1 */
+.submit-btn {
+  padding: 0.9em 2em;
+  border: 2px solid rgba(100, 200, 255, 0.6);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(150, 200, 255, 0.3));
+  color: rgba(100, 200, 255, 1);
+  font-weight: 500;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.45), rgba(150, 200, 255, 0.45));
+  border-color: rgba(100, 200, 255, 0.9);
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Result box styling */
+.result-box {
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.15), rgba(150, 200, 255, 0.15));
+  border: 2px solid rgba(100, 200, 255, 0.4);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.result-box .budget {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: rgba(100, 200, 255, 0.95);
+  margin: 0.5rem 0;
+  text-shadow: 0 0 8px rgba(100, 200, 255, 0.3);
+}
+
+.result-box .note {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.5rem 0 0 0;
+}
+
+/* Navigation buttons styling */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.nav-buttons .back-btn,
+.nav-buttons .submit-btn {
+  padding: 0.9em 2em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+.nav-buttons .back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.nav-buttons .submit-btn {
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(150, 200, 255, 0.3));
+  border-color: rgba(100, 200, 255, 0.6);
+  color: rgba(100, 200, 255, 1);
+}
+
+.nav-buttons .submit-btn:hover {
+  background: linear-gradient(135deg, rgba(100, 200, 255, 0.45), rgba(150, 200, 255, 0.45));
+  border-color: rgba(100, 200, 255, 0.9);
+  box-shadow: 0 0 12px rgba(100, 200, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #cfd8e3;
+  font-size: 0.9em;
+}
